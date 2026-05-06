@@ -1,0 +1,135 @@
+/* ==========================================================
+   Twigma Global Styles
+   CSS Custom Properties mapped from src/tokens/
+   ========================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors — twigma/color */
+  --color-bark:       #3D2B1F;
+  --color-moss:       #5A7A52;
+  --color-clay:       #B8693A;
+  --color-cream:      #F5F0E8;
+  --color-parchment:  #EDE5D4;
+
+  --color-neutral-900: #1A1207;
+  --color-neutral-800: #2E2015;
+  --color-neutral-700: #3D2B1F;
+  --color-neutral-600: #5C4033;
+  --color-neutral-500: #8A6E5C;
+  --color-neutral-400: #B5998A;
+  --color-neutral-300: #D4C4B8;
+  --color-neutral-200: #EDE5D4;
+  --color-neutral-100: #F5F0E8;
+  --color-neutral-50:  #FDFAF5;
+
+  --color-surface-base:    #FDFAF5;
+  --color-surface-raised:  #F5F0E8;
+  --color-surface-overlay: #EDE5D4;
+
+  --color-text-primary:   #1A1207;
+  --color-text-secondary: #5C4033;
+  --color-text-muted:     #8A6E5C;
+  --color-text-inverse:   #FDFAF5;
+
+  /* Typography — twigma/typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'Courier New', Courier, monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  4rem;
+
+  /* Spacing — twigma/spacing */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  --radius-sm:  2px;
+  --radius-base: 4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-full: 9999px;
+
+  --shadow-sm:  0 1px 2px rgba(26,18,7,0.06);
+  --shadow-base: 0 2px 8px rgba(26,18,7,0.08);
+  --shadow-md:  0 4px 16px rgba(26,18,7,0.10);
+  --shadow-lg:  0 8px 32px rgba(26,18,7,0.12);
+  --shadow-xl:  0 16px 48px rgba(26,18,7,0.16);
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: var(--space-6);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+/* Transitions */
+.transition-all {
+  transition: all 0.2s ease;
+}

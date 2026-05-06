@@ -1,0 +1,48 @@
+.article {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-16) 0 var(--space-24);
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+}
+
+.lead {
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.body {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.back {
+  margin-top: var(--space-8);
+  font-size: var(--text-sm);
+}
+
+.back a {
+  color: var(--color-moss);
+}
+
+.back a:hover {
+  text-decoration: underline;
+}
