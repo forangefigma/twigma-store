@@ -1,0 +1,85 @@
+{
+  "pointAndEdit": {
+    "priorityPaths": {
+      "prefer": [
+        "src/pages/**/*.{jsx,tsx,js,ts}",
+        "src/components/**/*.{jsx,tsx,js,ts}",
+        "src/App.jsx"
+      ],
+      "deprioritize": [
+        "src/context/**",
+        "src/data/**",
+        "src/constants/**",
+        "src/utils/**",
+        "src/tokens/**",
+        "src/**/*.module.css",
+        "src/index.css"
+      ],
+      "exclude": [
+        ".figma/**",
+        "node_modules/**",
+        "dist/**",
+        ".vite/**",
+        "**/*.test.{js,jsx,ts,tsx}",
+        "**/*.spec.{js,jsx,ts,tsx}",
+        ".github/**",
+        "vite.config.*",
+        "index.html"
+      ]
+    },
+    "libraryPaths": {
+      "local": [],
+      "external": []
+    },
+    "pathClassification": {
+      "classifier": "sonnet"
+    },
+    "exclusions": [
+      {
+        "glob": ".figma/**",
+        "reason": "Figma Code Connect mapping files (*.figma.js) are not UI source anchors; they are declarative Figma-to-code mappings and must not be selected as point-and-edit targets."
+      },
+      {
+        "glob": "node_modules/**",
+        "reason": "Third-party dependency sources are not editable UI source anchors within this project."
+      },
+      {
+        "glob": "dist/**",
+        "reason": "Build output is generated and not a UI source anchor."
+      },
+      {
+        "glob": ".vite/**",
+        "reason": "Vite internal cache directory is generated tooling output, not a UI source anchor."
+      },
+      {
+        "glob": "**/*.test.{js,jsx,ts,tsx}",
+        "reason": "Test files are not UI composition anchors."
+      },
+      {
+        "glob": "**/*.spec.{js,jsx,ts,tsx}",
+        "reason": "Spec files are not UI composition anchors."
+      },
+      {
+        "glob": ".github/**",
+        "reason": "CI/CD workflow configuration files are not UI source anchors."
+      },
+      {
+        "glob": "vite.config.*",
+        "reason": "Build tooling configuration is not a UI source anchor."
+      },
+      {
+        "glob": "index.html",
+        "reason": "Static HTML entry point is not a UI composition anchor; React components own all rendered UI."
+      }
+    ],
+    "generated": {
+      "schemaVersion": 2,
+      "source": "setup-agent.point-and-edit-path-classifier",
+      "prompt": "same-turn-setup-subagent-v5",
+      "model": "claude-sonnet-4-6",
+      "createdAt": "2026-10-12T00:00:00.000Z",
+      "confidence": 0.97,
+      "explanation": "Single-app React + Vite project with a clear src/pages and src/components separation, no published local design-system library, and Figma Code Connect files confined to .figma/ — classification is unambiguous."
+    }
+  }
+}
