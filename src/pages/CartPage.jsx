@@ -81,7 +81,7 @@ export function CartPage() {
           </ul>
 
           <aside className={styles.summary}>
-            <h2 className={styles.summaryTitle}>Order summary</h2>
+            <h2 className={styles.summaryTitle}>Order twig files</h2>
             {untilFree > 0 && (
               <p className={styles.freeShipNote}>
                 Add <strong>${untilFree}</strong> more for free shipping (orders over ${FREE_SHIPPING_MIN_USD}).

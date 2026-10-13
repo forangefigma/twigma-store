@@ -2,29 +2,29 @@
   "pointAndEdit": {
     "priorityPaths": {
       "prefer": [
-        "src/pages/**/*.{jsx,tsx,js,ts}",
-        "src/components/**/*.{jsx,tsx,js,ts}",
+        "src/pages/**/*.jsx",
+        "src/components/**/*.jsx",
         "src/App.jsx"
       ],
       "deprioritize": [
-        "src/context/**",
-        "src/data/**",
-        "src/constants/**",
-        "src/utils/**",
         "src/tokens/**",
-        "src/**/*.module.css",
+        "src/data/**",
+        "src/context/**",
+        "src/utils/**",
+        "src/constants/**",
+        "src/**/*.css",
         "src/index.css"
       ],
       "exclude": [
-        ".figma/**",
-        "node_modules/**",
+        ".figma/**/*.figma.js",
+        ".figma/**/*.figma.ts",
+        ".figma/**/*.figma.jsx",
+        ".figma/**/*.figma.tsx",
         "dist/**",
         ".vite/**",
-        "**/*.test.{js,jsx,ts,tsx}",
-        "**/*.spec.{js,jsx,ts,tsx}",
-        ".github/**",
-        "vite.config.*",
-        "index.html"
+        "node_modules/**",
+        ".git/**",
+        ".github/**"
       ]
     },
     "libraryPaths": {
@@ -36,40 +36,40 @@
     },
     "exclusions": [
       {
-        "glob": ".figma/**",
-        "reason": "Figma Code Connect mapping files (*.figma.js) are not UI source anchors; they are declarative Figma-to-code mappings and must not be selected as point-and-edit targets."
+        "glob": ".figma/**/*.figma.js",
+        "reason": "Figma Code Connect mapping files are not UI source anchors; they are code-to-design binding definitions and must not be selected as point-and-edit targets."
       },
       {
-        "glob": "node_modules/**",
-        "reason": "Third-party dependency sources are not editable UI source anchors within this project."
+        "glob": ".figma/**/*.figma.ts",
+        "reason": "Figma Code Connect mapping files are not UI source anchors; they are code-to-design binding definitions and must not be selected as point-and-edit targets."
+      },
+      {
+        "glob": ".figma/**/*.figma.jsx",
+        "reason": "Figma Code Connect mapping files are not UI source anchors; they are code-to-design binding definitions and must not be selected as point-and-edit targets."
+      },
+      {
+        "glob": ".figma/**/*.figma.tsx",
+        "reason": "Figma Code Connect mapping files are not UI source anchors; they are code-to-design binding definitions and must not be selected as point-and-edit targets."
       },
       {
         "glob": "dist/**",
-        "reason": "Build output is generated and not a UI source anchor."
+        "reason": "Build output; not editable source."
       },
       {
         "glob": ".vite/**",
-        "reason": "Vite internal cache directory is generated tooling output, not a UI source anchor."
+        "reason": "Vite dependency pre-bundle cache; generated, not source."
       },
       {
-        "glob": "**/*.test.{js,jsx,ts,tsx}",
-        "reason": "Test files are not UI composition anchors."
+        "glob": "node_modules/**",
+        "reason": "Third-party dependencies; not project source."
       },
       {
-        "glob": "**/*.spec.{js,jsx,ts,tsx}",
-        "reason": "Spec files are not UI composition anchors."
+        "glob": ".git/**",
+        "reason": "Git internals; not source."
       },
       {
         "glob": ".github/**",
-        "reason": "CI/CD workflow configuration files are not UI source anchors."
-      },
-      {
-        "glob": "vite.config.*",
-        "reason": "Build tooling configuration is not a UI source anchor."
-      },
-      {
-        "glob": "index.html",
-        "reason": "Static HTML entry point is not a UI composition anchor; React components own all rendered UI."
+        "reason": "CI/CD workflow configuration; not UI source."
       }
     ],
     "generated": {
@@ -77,9 +77,9 @@
       "source": "setup-agent.point-and-edit-path-classifier",
       "prompt": "same-turn-setup-subagent-v5",
       "model": "claude-sonnet-4-6",
-      "createdAt": "2026-10-12T00:00:00.000Z",
+      "createdAt": "2026-10-13T00:00:00.000Z",
       "confidence": 0.97,
-      "explanation": "Single-app React + Vite project with a clear src/pages and src/components separation, no published local design-system library, and Figma Code Connect files confined to .figma/ — classification is unambiguous."
+      "explanation": "Single-app React/Vite project with a clear, flat structure; all UI source is under src/pages and src/components with no external UI library dependency, making classification straightforward and high-confidence."
     }
   }
 }
